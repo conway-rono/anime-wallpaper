@@ -35,6 +35,4 @@ function sticker(){
     }
 }
 
-// allCards[0].style.background=`url(${allPaths[0]}) no-repeat center/cover`;
-
 sticker();
