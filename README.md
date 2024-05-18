@@ -1,2 +1,3 @@
 # anime
- mockup for anime wallpapers site
+ mockup for anime wallpapers site.
+ This to test color pallete-blue range
