@@ -1,0 +1,15 @@
+<span class="material-symbols-outlined">
+                person
+            </span>
+            <span class="material-symbols-outlined">
+                search
+            </span>
+            <span class="material-symbols-outlined">
+                explore
+            </span>
+            <span class="material-symbols-outlined">
+                folder
+            </span>
+            <span class="material-symbols-outlined">
+                settings
+            </span>

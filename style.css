@@ -1,0 +1,197 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(11, 11, 14);
+    background-image: linear-gradient(to left, rgb(27, 28, 39),rgb(10, 11, 15));
+}
+
+@media screen and (max-width:600px) {
+    .nav{
+        display: none;
+    }
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* border: 2px solid chartreuse; */
+    max-width: 2800px;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav,.page{
+    border: 1px solid rgb(46, 111, 111);
+    height: 100%;
+    border-radius: 5px;
+    margin: 1px;
+}
+
+.nav{
+    width: 50px;
+    min-width: 40px;
+    border: none;
+    background-image: linear-gradient(to right,rgba(34, 61, 75, 0.35),rgba(0, 0, 0, 0.35));
+    /* padding-top: 4rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+    span{
+        color: rgb(131, 182, 237);
+    }
+    span:hover{
+        color: white;
+        scale: 1.2;
+    }
+}
+
+.page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 5px; */
+    gap: 5px;
+    border: none;
+}
+
+.heaven,.earth{
+    /* border: 1px solid rgb(0, 49, 84); */
+    box-shadow: 0 0 2px 0px rgb(0, 49, 84);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.heaven{
+    background: url(./images/path.jpg) center/cover no-repeat;
+    flex: 2;
+    overflow: hidden;
+    /* border: none; */
+    
+    .mask{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.7));
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        gap: 3px;
+        
+        .logo,.search-box{
+            width: 45%;
+            min-width: 350px;
+            /* border: 1px solid white; */
+            min-height: 50px;
+            background-color: rgba(0, 0, 0, 0.15);
+            box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            backdrop-filter: blur(1px);
+        }
+        
+        .logo{
+            p{
+                font-size: 1.5rem;
+                color: rgb(233, 235, 255);
+                text-align: center;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: 600;
+            }
+        }
+        
+        .search-box{
+            display: grid;
+            place-items: center;
+            height: 100px;
+            input{
+                width: 55%;
+                height: 2rem;
+                background: none;
+                border: 2px solid teal;
+                border-radius: 5px;
+                color: white;
+                text-align: center;
+            }
+            input:focus{
+                background-color: rgba(0, 0, 0, 0.586);
+                
+            }
+        }
+    }
+}
+
+.earth{
+    flex: 4;
+    max-height: 65vh;
+    padding: 1rem;
+    background-image: linear-gradient(to bottom,rgba(40, 71, 87, 0.15),rgba(0, 0, 0, 0.85));
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-auto-rows: 400px;
+    gap: 1rem 1.2rem;
+    
+    .cards{
+        width: 230px;
+        /* aspect-ratio: 9/16; */
+        height: 350px;
+        background: grey;
+        border-radius: 10px;
+        background: url(./images/robot.jpg) no-repeat center/cover;
+        overflow: hidden;
+        box-shadow: 1px 1px 5px 0 rgb(12, 46, 58);
+        transition: all 250ms ease;
+        
+        .cover{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            
+            .details{
+                /* border: 1px solid white; */
+                width: 100%;
+                height: 30%;
+                backdrop-filter: blur(1px);
+                background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0.9));
+                padding: 10px;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                p{
+                    color: white;
+                    font-family:  sans-serif;
+                    font-size: 0.75rem;
+                }
+                .interactions{
+                    color: white;
+                    display: flex;
+                    justify-content: end;
+                    gap: 8px;
+                    span{
+                        opacity: 70%;
+                    }
+                    span:hover{
+                        opacity: 100%;
+                    }
+                }
+            }
+        }    
+    }
+    
+    .cards:hover{
+        width: 248px;
+        border-radius: 0px;
+        box-shadow: 0px 0px 3px 1px rgb(30, 110, 139);
+    }
+}
